@@ -5,41 +5,63 @@ article {
   grid-template-columns:
         1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
   padding: 0.5in 0;
+  background: linear-gradient(hsl(55, 100%, 96%), white 6.55rem);
 }
 
 /* <------- article elements -------> */
 
 h1 {
   font: 700 2.0rem/1.2 "Roboto";
+  color: hsl(000, 0%, 33%);
 }
 
 h2 {
   font: 400 1.5rem/1.2 "Roboto";
+  color: hsl(000, 0%, 67%);
 }
 
 h3 {
   font: 700 1.0rem/1.2 "Roboto";
+  color: hsl(250, 100%, 67%);
 }
 
 p {
   font: 400 1.0rem/1.5 "Roboto";
+  color: hsl(000, 0%, 33%);
+}
+
+figcaption p {
+  font: 400 1.0rem/1.5 "Roboto";
+  color: hsl(000, 0%, 83%);
 }
 
 a {
-  box-shadow: inset 0 -0.25em black;
+  box-shadow: inset 0 -0.25em hsl(55, 100%, 75%);
 }
 
 time {
   font: 700 1.0rem/1.2 "Roboto";
+  color: hsl(250, 100%, 83%);
 }
 
-h2, p:not(:last-child) {
+h2, p {
   margin-bottom: 2.4rem;
+}
+
+hr {
+  background-color:hsl(000, 0%, 33%);
+  border: none;
+  color: hsl(000, 0%, 33%);
+  height: 1px;
+  margin: 0 auto;
+  text-align: center;
+  width: 60%; 
 }
 
 /* <------- article images -------> */
 article * {
   grid-column: start / end;
+  
 }
 
 .size-1 {
@@ -58,9 +80,30 @@ article * {
   grid-column: 1 / 8;
 }
 
-img.size-1, img.size-2, img.size-3, img.size-4 {
+.size-1 img, .size-2 img, .size-3 img, .size-4 img {
   width: 100%;
 }
+
+figcaption {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+/* <------- social media -------> */
+
+.social-share {
+  display: flex;
+  justify-content: center;
+}
+
+.social-share img {
+  padding: 0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 
 /* <------- media queries -------> */
 
